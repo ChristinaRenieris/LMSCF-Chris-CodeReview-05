@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Code Review 5</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <div class=" h2 text-white mb-0 p-2">Movie Factory</div>
+        <nav class="navbar navbar-light bg-secondary  text-center">
+            <a class="h4 navbar-brand text-white" href="#!">Home</a>
+        </nav>
+    </header>
+
+    <div class="container-fluid p-0">
+
+        <div class="row pt-4 w-100">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4 h4 text-center text-white">Movies</div>
+            <div id="sort" class="col-lg-4 btn text-white">
+                <button class="sortBtn" type="button" onclick="sortByLikes()">
+                <i class="fas fa-sort-down"></i>Sort</button>
+            </div>
+
+
+        </div>
+
+        <div class="row p-5 w-100" id="row">
+            <!--movies show here-->
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="col-lg-12 h5 bg-dark text-center text-white p-5">Movie Factory</div>
+    </footer>
+
+    <script src="JS/movies.json"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/23d1f8c284.js" crossorigin="anonymous"></script>
+    <script>
+        var movie = JSON.parse(movies);
+        for (var i = 0; i < movie.length; i++) {
+
+            var film = `<div class="col-lg-5 media bg-dark text-white p-2 mb-3">
+                <img class="media-left pr-4" alt="Image" src="${movie[i].img}">
+                <div class="media-body">
+                    <h4 class="card-title">${movie[i].name}</h4>
+                    <p class="card-text">${movie[i].info}</p>
+                    <div class="alignButton"><button onclick="increaseLikes(${movie[i].id})" type="button" class="btn text-success btn-sm like">Like <i class="fas fa-thumbs-up"></i> </button>
+                        <span class="likeCounter">${movie[i].likes}</span>
+                    </div>
+                </div>
+            </div>`;
+
+            $('#row').append(film);
+
+            function increaseLikes(i) {
+                var like = parseInt(movie[i].likes) + 1;
+                $($('.likeCounter')[i]).html(like);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

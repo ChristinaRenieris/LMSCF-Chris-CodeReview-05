@@ -1,0 +1,38 @@
+movies = `[{
+    "id": "0",
+    "name": "Spirited Away",
+    "img": "IMG/spirited.png",
+    "info": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+    "likes": "50"
+    }, {
+        "id": "1",
+        "name": "My Neighbor Totoro",
+        "img": "IMG/totoro.png",
+        "info": "When two girls move to the country to be near their ailing mother, they have adventures with the wondrous forest spirits who live nearby.",
+        "likes": "34"
+        }, {
+            "id": "2",
+            "name": "Kiki's Delivery Service",
+            "img": "IMG/kiki.jpg",
+            "info": "A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.",
+            "likes": "26"
+            }, {     
+                "id": "3",           
+                "name": "Castle in the Sky",
+                "img": "IMG/castle.png",
+                "info": "A young boy and a girl with a magic crystal must race against pirates and foreign agents in a search for a legendary floating castle.",
+                "likes": "64"
+                }, {
+                    "id": "4",
+                    "name": "Ponyo",
+                    "img": "IMG/ponyo.png",
+                    "info": "A five-year-old boy develops a relationship with Ponyo, a young goldfish princess who longs to become a human after falling in love with him.",
+                    "likes": "40"
+                    }, {    
+                        "id": "5",                    
+                        "name": "Howl's Moving Castle",
+                        "img": "IMG/movingCastle.png",
+                        "info": "When an unconfident young woman is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking castle.",
+                        "likes": "55"
+    }]
+    `;
